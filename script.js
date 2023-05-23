@@ -11,17 +11,21 @@ function makeRows(rows, cols) {
       container.appendChild(cell).className = "grid-item";
     };
   };
+
+  makeRows(16, 16);
   const button = document.getElementById("button");
   function promptGrid(){
-    prompt("Enter grid");
-    
+    let gridSize= parseInt(prompt("Enter dimensions (Row x Column"));
+   if(gridSize >100){
+    alert("Too big")
+   } else{
+    container.innerHTML="";
+    makeRows(gridSize,gridSize);
   }
-
-
-
-
-
-  function changeGrid(){
+  }
     
-  } 
-  makeRows(16, 16);
+  //  function changeGrid(){
+    
+  // }  function changeGrid(){
+    
+  // } 
